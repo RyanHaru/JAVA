@@ -9,7 +9,10 @@ package Recursividad;
  * @author Henry&Nya
  */
 public class Suma_Matriz {
-    public static void main(String[] args) {
-        System.out.println("gato matriz");
+    
+    public void sumaMat(int mA[][],int mB[][],int mC[][],int f,int c){
+        if(f<=0 && c<=0){
+            
+        }
     }
 }
