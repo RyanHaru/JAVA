@@ -10,9 +10,9 @@ package Recursividad;
  *
  * @author Henry&Nya
  */
-public class MENU {
+public class AYUDA_MENU {
     public static void main(String[] args) {
-        PRUEBAS pruebas = new PRUEBAS();
+        Basic pruebas = new Basic();
         System.out.println(pruebas.sumaRec(9));
         System.out.println(pruebas.facRec(6));
         System.out.println(pruebas.sumaPar(26725,0));

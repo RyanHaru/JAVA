@@ -8,7 +8,7 @@ package Recursividad;
  *
  * @author Henry&Nya
  */
-public class PRUEBAS {
+public class Basic {
     
     public int sumaRec(int n){
         if(n==1){

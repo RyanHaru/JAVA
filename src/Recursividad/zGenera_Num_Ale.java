@@ -10,7 +10,7 @@ import java.util.Random;
  *
  * @author Henry&Nya
  */
-public class Genera_Num_Ale {
+public class zGenera_Num_Ale {
     Random aleatorio = new Random();
     
     
@@ -20,7 +20,16 @@ public class Genera_Num_Ale {
         
         for (int i = 0; i < fila; i++) {
             for (int j = 0; j < columna; j++) {
-                m[i][j]=aleatorio.nextInt(100);
+                m[i][j]=1+aleatorio.nextInt(10);
+            }
+        }
+    }
+    
+    public void matrizNumero(int m[][],int fila,int columna,int n){
+        
+        for (int i = 0; i < fila; i++) {
+            for (int j = 0; j < columna; j++) {
+                m[i][j]=n;
             }
         }
     }

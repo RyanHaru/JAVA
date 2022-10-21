@@ -11,15 +11,15 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Henry&Nya
  */
-public class MainForm extends javax.swing.JFrame {
+public class AYUDA_MAIN_FORM extends javax.swing.JFrame {
 
     /**
-     * Creates new form MainForm
+     * Creates new form AYUDA_MAIN_FORM
      */
-    int mA[][]= new int[10][10];
-    int mB[][]= new int[10][10];
-    int mC[][]= new int[10][10];
-    public MainForm() {
+    int mA[][]= new int[3][3];
+    int mB[][]= new int[3][3];
+    int mC[][]= new int[3][3];
+    public AYUDA_MAIN_FORM() {
         initComponents();
     }
 
@@ -43,6 +43,8 @@ public class MainForm extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         btnSuma = new javax.swing.JButton();
+        btn2 = new javax.swing.JButton();
+        gus = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -94,6 +96,20 @@ public class MainForm extends javax.swing.JFrame {
             }
         });
 
+        btn2.setText("Suma 2");
+        btn2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn2ActionPerformed(evt);
+            }
+        });
+
+        gus.setText("Matriz Gusanito");
+        gus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                gusActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -108,12 +124,19 @@ public class MainForm extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel1)
                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(44, 44, 44)
-                                .addComponent(jButton1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btnSuma)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(44, 44, 44)
+                                        .addComponent(jButton1)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(btnSuma))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(0, 0, Short.MAX_VALUE)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(gus)
+                                            .addComponent(btn2))))
                                 .addGap(31, 31, 31))))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -126,23 +149,23 @@ public class MainForm extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(jLabel1)
-                        .addGap(24, 24, 24)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2)
-                            .addComponent(jButton1)
-                            .addComponent(btnSuma))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 179, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(30, 30, 30)
+                .addComponent(jLabel1)
+                .addGap(24, 24, 24)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2)
+                    .addComponent(jButton1)
+                    .addComponent(btnSuma))
+                .addGap(18, 18, 18)
+                .addComponent(btn2)
+                .addGap(18, 18, 18)
+                .addComponent(gus)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 93, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(22, 22, 22))
         );
 
@@ -150,17 +173,41 @@ public class MainForm extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        MainForm mainForm = new MainForm();
-        Genera_Num_Ale genera_Num_Ale = new Genera_Num_Ale();
-        genera_Num_Ale.matrizRandom(mA, 5, 5);
-        mainForm.tabla(mA, 5, 5, tbl1);
-        genera_Num_Ale.matrizRandom(mB, 5, 5);
-        mainForm.tabla(mB, 5, 5, tbl2);
+        AYUDA_MAIN_FORM mainForm = new AYUDA_MAIN_FORM();
+        zGenera_Num_Ale genera_Num_Ale = new zGenera_Num_Ale();
+        genera_Num_Ale.matrizRandom(mA, 3, 3);
+        mainForm.tabla(mA, 3, 3, tbl1);
+        genera_Num_Ale.matrizRandom(mB, 3, 3);
+        mainForm.tabla(mB, 3, 3, tbl2);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void btnSumaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSumaActionPerformed
+        MatrizSuma matrizSuma = new MatrizSuma();
+        AYUDA_MAIN_FORM ayuda_main_form = new AYUDA_MAIN_FORM();
+        matrizSuma.sumaMatriz(mA, mB, mC, 0, 0, 3,3);
+        ayuda_main_form.tabla(mC, 3, 3,tbl3);
         
     }//GEN-LAST:event_btnSumaActionPerformed
+
+    private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
+        AYUDA_MAIN_FORM mainForm = new AYUDA_MAIN_FORM();
+        zGenera_Num_Ale genera_Num_Ale = new zGenera_Num_Ale();
+        MatrizSuma matrizSuma = new MatrizSuma();
+        genera_Num_Ale.matrizNumero(mA, 3, 2, 1);
+        genera_Num_Ale.matrizNumero(mB, 3, 2, 2);
+        matrizSuma.sumaMatriz(mA, mB, mC, 0, 0, 3, 2);
+        mainForm.tabla(mA, 3, 2, tbl1);
+        mainForm.tabla(mB, 3, 2, tbl2);
+        mainForm.tabla(mC, 3, 2, tbl3);
+        
+    }//GEN-LAST:event_btn2ActionPerformed
+
+    private void gusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gusActionPerformed
+        AYUDA_MAIN_FORM mainForm = new AYUDA_MAIN_FORM();
+        MatrizGusano matrizGusano = new MatrizGusano();
+        matrizGusano.matrizGusanito(mA, 0, 0, 3, 2, 1);
+        mainForm.tabla(mA, 3, 2, tbl1);
+    }//GEN-LAST:event_gusActionPerformed
 
     /**
      * @param args the command line arguments
@@ -179,20 +226,21 @@ public class MainForm extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MainForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AYUDA_MAIN_FORM.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MainForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AYUDA_MAIN_FORM.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MainForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AYUDA_MAIN_FORM.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MainForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AYUDA_MAIN_FORM.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MainForm().setVisible(true);
+                new AYUDA_MAIN_FORM().setVisible(true);
             }
         });
     }
@@ -208,7 +256,9 @@ public class MainForm extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn2;
     private javax.swing.JButton btnSuma;
+    private javax.swing.JButton gus;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
